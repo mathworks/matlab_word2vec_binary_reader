@@ -1,3 +1,4 @@
+[![View matlab_word2vec_binary_reader on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/77272-matlab_word2vec_binary_reader)
 # readW2Vbin
 
 
