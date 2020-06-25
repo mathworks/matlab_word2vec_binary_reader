@@ -76,8 +76,8 @@ hw = waitbar(0,'Loadeing word2vec File');
 %%
 % Define the additional number of bytes to be read to include both the
 % "word" part and the "vector" part of the data, assuming the maximum
-% length of the words in the vocabulary is 200. 
-nWordBuffer = 200;
+% length of the words in the vocabulary is 1000. 
+nWordBuffer = 1000;
 
 nVector = 4*nDims; % assuming the vecotrs are stored in 'single' format
 nBuffer = nWordBuffer + nVector;
