@@ -14,7 +14,7 @@ Text Analytics Toolbox Required.
 # Syntax
 
 
-`emb = readW2Vbin(filename)`
+`emb = readW2Vbin(filename [,encoding])`
 
 
 # Description
@@ -30,8 +30,9 @@ Use `readW2Vbin` to read a pre-trained word2vec word embedding model in the bina
 # Input Arguments
 
 
-`filename `- Name the pre-trained word2vec model file in the binary format, specified as a string scalar or character vector.
+`filename `- Name of the pre-trained word2vec model file in the binary format, specified as a string scalar or character vector.
 
+`encoding `- Character encoding of the "word" in the binary file, specified as a string scalar or charcter vector. The default value is 'UTF-8'.
 
 # Output Arguments
 
