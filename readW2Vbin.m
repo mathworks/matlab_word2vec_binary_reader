@@ -1,4 +1,4 @@
-function emb = readW2Vbin(fileName)
+function emb = readW2Vbin(fileName,encoding)
 %% readW2Vbin2
 %
 % This function reads a binary pre-trained word2vec model file. 
@@ -17,6 +17,13 @@ function emb = readW2Vbin(fileName)
 %
 % Copyright 2000 The MathWorks, Inc.
 %
+%% Check the input arguments and set default encoding
+
+arguments
+  fileName (1,:) char 
+  encoding (1,:) char = 'UTF-8';
+end
+
 %% Open the word2vec file and obtain header inforamtion
 %
 % Open the file, and read the header section of the file.  
@@ -125,7 +132,8 @@ for kk = 1:nWords
   
   % Cast the uint8 into relevant type
   word = tmpWord(1:wordStopPos-1);
-  vocab(kk) = char(word)';
+  % vocab(kk) = char(word)';
+  vocab(kk) = native2unicode(word',encoding);
   mat(kk,:) = typecast(vector,'single')';
     
   % Update the waitbar
